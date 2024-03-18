@@ -49,11 +49,15 @@ Once all rounds have concluded, your total score of won and lost rounds is displ
 
 # Author
 
-This Java program was written by Gabriel Schrittwieser as an exercise for their Mobile Software Development study.
+Author: [Gabriel Schrittwieser](https://github.com/gabrielschrittwieser)
+University: [FH JOANNEUM](https://www.fh-joanneum.at/)
 
 # Exercises
 
 ## First exercise to learn basic markdown syntax
+
 - [Exercise1](./exercise1.md)
+
 ## Second exercise to further grasp markdown syntax with a collection of git commands
+
 - [Exercise2](./exercise2.md)
