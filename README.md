@@ -56,8 +56,12 @@ University: [FH JOANNEUM](https://www.fh-joanneum.at/)
 
 ## First exercise to learn basic markdown syntax
 
-- [Exercise1](./exercise1.md)
+- [Exercise 1](./exercise1.md)
 
 ## Second exercise to further grasp markdown syntax with a collection of git commands
 
-- [Exercise2](./exercise2.md)
+- [Exercise 2](./exercise2.md)
+
+## Third exercise to learn versioning a Java Project with Git
+
+- [Exercise 3](./exercise3.md)
