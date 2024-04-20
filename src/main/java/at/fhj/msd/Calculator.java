@@ -1,4 +1,5 @@
 package at.fhj.msd;
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -87,6 +88,11 @@ public class Calculator {
         String op = readOperator();
         double v2 = readNumber();
         double result = 0;
+        while (op.equals("/") && v2 == 0) {
+            System.out.println("Division by zero not possible");
+            numCount = 2;
+            v2 = readNumber();
+        }
 
         switch (op) {
             case "+":
@@ -102,6 +108,7 @@ public class Calculator {
                 result = divideNums(v1, v2);
                 break;
         }
+
         System.out.printf("%s%s%s = %s", doubleTrimmer(v1), op, doubleTrimmer(v2), doubleTrimmer(result));
     }
 }
