@@ -1,4 +1,6 @@
 *.html
 *.pdf
+*.iml
 .idea
 target
+out
