@@ -1,5 +1,5 @@
 package at.fhj.msd;
-import java.util.Arrays;
+
 import java.util.Scanner;
 import java.util.Set;
 
@@ -7,12 +7,13 @@ import java.util.Set;
  * Simple Calculator that implements four basic operations: add, subtract, divide, multiply
  */
 public class Calculator {
-    private static final Set<String> OPERATORS = Set.of("+", "-", "*", "/");
+    private static final Set<String> OPERATORS = Set.of("+", "-", "*", "/", "!");
     static Scanner scanner = new Scanner(System.in);
     static int numCount = 1;
 
     /**
      * Reads a non-negative double input by the user, loops until valid input is made
+     *
      * @return non-negative Double
      */
     static double readNumber() {
@@ -34,6 +35,7 @@ public class Calculator {
 
     /**
      * Cuts decimals if they only consist of zeros
+     *
      * @param d Double
      * @return Whole number or decimal number
      */
@@ -49,16 +51,17 @@ public class Calculator {
 
     /**
      * Reads user-input operator. Loops until valid operator is input
+     *
      * @return String corresponding to operator
      */
     static String readOperator() {
-        while(true) {
+        while (true) {
             System.out.print("Operator:");
             String o = scanner.nextLine();
             if (OPERATORS.contains(o)) {
                 return o;
             } else {
-                System.out.println("Please enter a valid operator - allowed operators: +,-,*,/");
+                System.out.println("Please enter a valid operator - allowed operators: +,-,*,/,!");
             }
         }
     }
@@ -76,7 +79,17 @@ public class Calculator {
     }
 
     static double divideNums(double num1, double num2) {
+        if (num2 == 0)
+            throw new ArithmeticException("Division by zero not possible");
         return num1 / num2;
+    }
+
+    static double factorial(int num) {
+        if (num < 0)
+            return 0;
+        if (num == 1 || num == 0)
+            return 1;
+        return (num * factorial(num - 1));
     }
 
     /**
@@ -85,16 +98,22 @@ public class Calculator {
      */
     static void calculator() {
         double v1 = readNumber();
+        int v3 = 0;
+        double v2 = 0;
         String op = readOperator();
-        double v2 = readNumber();
-        double result = 0;
-        while (op.equals("/") && v2 == 0) {
-            System.out.println("Division by zero not possible");
-            numCount = 2;
+
+        if (op.equals("!")) {
+            v3 = (int) v1;
+        } else {
             v2 = readNumber();
         }
 
+        double result = 0;
+
         switch (op) {
+            case "!":
+                result = factorial(v3);
+                break;
             case "+":
                 result = addNums(v1, v2);
                 break;
@@ -105,10 +124,21 @@ public class Calculator {
                 result = multiplyNums(v1, v2);
                 break;
             case "/":
-                result = divideNums(v1, v2);
-                break;
+                while (true) {
+                    try {
+                        result = divideNums(v1, v2);
+                        break;
+                    } catch (ArithmeticException e) {
+                        System.out.println(e.getMessage());
+                        numCount--;
+                        v2 = readNumber();
+                    }
+                }
         }
-
-        System.out.printf("%s%s%s = %s", doubleTrimmer(v1), op, doubleTrimmer(v2), doubleTrimmer(result));
+        if (!op.equals("!")) {
+            System.out.printf("%s%s%s = %s", doubleTrimmer(v1), op, doubleTrimmer(v2), doubleTrimmer(result));
+        } else {
+            System.out.printf("Factorial of %d: %s", v3, doubleTrimmer(result));
+        }
     }
 }
