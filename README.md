@@ -65,3 +65,7 @@ University: [FH JOANNEUM](https://www.fh-joanneum.at/)
 ## Third exercise to learn versioning a Java Project with Git
 
 - [Exercise 3](./exercise3.md)
+
+## Fourth exercise to learn testing using JUnit
+
+- [Exercise 4](./exercise4.md)
