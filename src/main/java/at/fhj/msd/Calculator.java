@@ -3,10 +3,14 @@ package at.fhj.msd;
 import java.util.Scanner;
 import java.util.Set;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /**
  * Simple Calculator that implements four basic operations: add, subtract, divide, multiply
  */
 public class Calculator {
+    private static Logger logger = LogManager.getLogger();
     private static final Set<String> OPERATORS = Set.of("+", "-", "*", "/", "!");
     static Scanner scanner = new Scanner(System.in);
     static int numCount = 1;
@@ -67,20 +71,26 @@ public class Calculator {
     }
 
     static double addNums(double num1, double num2) {
+        logger.debug("Parameters: {} + {}", num1, num2);
         return num1 + num2;
     }
 
     static double subtractNums(double num1, double num2) {
+        logger.debug("Parameters: {} - {}", num1, num2);
         return num1 - num2;
     }
 
     static double multiplyNums(double num1, double num2) {
+        logger.debug("Parameters: {} * {}", num1, num2);
         return num1 * num2;
     }
 
     static double divideNums(double num1, double num2) {
-        if (num2 == 0)
+        logger.debug("Parameters: {} / {}", num1, num2);
+        if (num2 == 0) {
+            logger.error("Division by zero!");
             throw new ArithmeticException("Division by zero not possible");
+        }
         return num1 / num2;
     }
 
