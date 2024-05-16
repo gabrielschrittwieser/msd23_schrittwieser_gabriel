@@ -69,3 +69,7 @@ University: [FH JOANNEUM](https://www.fh-joanneum.at/)
 ## Fourth exercise to learn testing using JUnit
 
 - [Exercise 4](./exercise4.md)
+
+## Fifth exercise using branches and Log4J
+
+- [Exercise 5](./exercise5.md)
