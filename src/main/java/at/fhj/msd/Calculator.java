@@ -55,6 +55,7 @@ public class Calculator {
 
     /**
      * Reads user-input operator. Loops until valid operator is input
+     * Valid operators are: +,-,*,/,!
      *
      * @return String corresponding to operator
      */
@@ -70,21 +71,50 @@ public class Calculator {
         }
     }
 
+    /**
+     * Takes two numbers and adds them together
+     *
+     * @param num1 First number
+     * @param num2 Second Number
+     * @return Sum of the two numbers
+     */
     static double addNums(double num1, double num2) {
         logger.debug("Parameters: {} + {}", num1, num2);
         return num1 + num2;
     }
 
+    /**
+     * Takes two numbers and subtracts the second number from the first number
+     *
+     * @param num1 First number
+     * @param num2 Second Number
+     * @return Difference of second number subtracted from the first
+     */
     static double subtractNums(double num1, double num2) {
         logger.debug("Parameters: {} - {}", num1, num2);
         return num1 - num2;
     }
 
+    /**
+     * Takes two numbers and multiplies them
+     *
+     * @param num1 First number
+     * @param num2 Second Number
+     * @return Product of both numbers
+     */
     static double multiplyNums(double num1, double num2) {
         logger.debug("Parameters: {} * {}", num1, num2);
         return num1 * num2;
     }
 
+    /**
+     * Takes two numbers and divides the first number by the second number
+     *
+     * @param num1 First number
+     * @param num2 Second Number
+     * @return Division of both numbers
+     * @throws ArithmeticException if Division by zero is attempted
+     */
     static double divideNums(double num1, double num2) {
         logger.debug("Parameters: {} / {}", num1, num2);
         if (num2 == 0) {
@@ -94,6 +124,12 @@ public class Calculator {
         return num1 / num2;
     }
 
+    /**
+     * Takes a number and calculates its factorial
+     *
+     * @param num Any integer
+     * @return Factorial of given integer
+     */
     static double factorial(int num) {
         if (num < 0)
             return 0;
