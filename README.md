@@ -73,3 +73,7 @@ University: [FH JOANNEUM](https://www.fh-joanneum.at/)
 ## Fifth exercise using branches and Log4J
 
 - [Exercise 5](./exercise5.md)
+
+## Sixth exercise - Maven Site Documentation
+
+- [Exercise 6](./exercise6.md)
