@@ -1,0 +1,10 @@
+<project name="Exercise 6 Maven Site Documentation">
+    <publishDate position="right"/>
+    <version position="left"/>
+    <body>
+        <menu ref="reports"/>
+        <menu>
+            <item name="Good Style" href="good_style.html"/>
+        </menu>
+    </body>
+</project>
