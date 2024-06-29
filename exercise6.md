@@ -4,25 +4,25 @@
 
 Maven Site requires a specific folder structure in order to work:
 
-\+\- src/
-&emsp;\+\- site/
-&emsp;&emsp;\+\- apt/
-&emsp;&emsp;|&emsp;\+\- index.apt
-&emsp;&emsp;|
-&emsp;&emsp;\+\- fml/
-&emsp;&emsp;|&emsp;\+\- general.fml
-&emsp;&emsp;|&emsp;\+\- faq.fml
-&emsp;&emsp;|
-&emsp;&emsp;\+\- markdown/
-&emsp;&emsp;|&emsp;\+\- markup.md
-&emsp;&emsp;|
-&emsp;&emsp;\+\- xdoc/
-&emsp;&emsp;|&emsp;\+\- other.xml
-&emsp;&emsp;|
-&emsp;&emsp;\+\- xhtml/
-&emsp;&emsp;|&emsp;\+\- xhtml-too.xhtml
-&emsp;&emsp;|
-&emsp;&emsp;\+\- site.xnl
+\+\- src/\
+&emsp;\+\- site/\
+&emsp;&emsp;\+\- apt/\
+&emsp;&emsp;|&emsp;\+\- index.apt\
+&emsp;&emsp;|\
+&emsp;&emsp;\+\- fml/\
+&emsp;&emsp;|&emsp;\+\- general.fml\
+&emsp;&emsp;|&emsp;\+\- faq.fml\
+&emsp;&emsp;|\
+&emsp;&emsp;\+\- markdown/\
+&emsp;&emsp;|&emsp;\+\- markup.md\
+&emsp;&emsp;|\
+&emsp;&emsp;\+\- xdoc/\
+&emsp;&emsp;|&emsp;\+\- other.xml\
+&emsp;&emsp;|\
+&emsp;&emsp;\+\- xhtml/\
+&emsp;&emsp;|&emsp;\+\- xhtml-too.xhtml\
+&emsp;&emsp;|\
+&emsp;&emsp;\+\- site.xnl\
 
 It uses data from provided information such as JavaDoc comments, maven site documents, JUnit Tests, pom.xml information, etc.
 
