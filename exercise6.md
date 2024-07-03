@@ -29,3 +29,11 @@ It uses data from provided information such as JavaDoc comments, maven site docu
 ### What different Aspects, Configurations, Information etc. is configured in site.xml & pom.xml?
 
 The pom.xml file includes the maven site plugin and jacoco to generate the documentation as well as information about test coverage. Developer Information and a link to the github repo is also added to the beginning of the file. The site.xml file is used to structure the Layout of the Maven Site Documentation.
+
+## Images
+
+![ex6_image1](./resources/images/ex6_1.png)
+
+![ex6_image2](./resources/images/ex6_2.png)
+
+![ex6_image3](./resources/images/ex6_3.png)
